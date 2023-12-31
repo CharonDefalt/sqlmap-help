@@ -1,9 +1,10 @@
 #just-4-ethical-hacking
 
 Warning : for do it faster you can set this in commands   --threads=1   and watch carefully for what sqlmap asking you or responding you
+_______________________________________________________________________________________________________________________________________________
+Let's start
 
-
-1 : scan  your website with acunetix
+1 : scan your website with acunetix
 
 2 : save the vulnerability request and delete the payload in request the save it as txt file
 
